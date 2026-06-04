@@ -1,7 +1,7 @@
 class Solution {
 public:
  int missingNumber(vector<int>& nums) {
-   //Optimal solution
+   //Optimal solution by Basic Mathematics 
       int n=nums.size();
       int sum1=0;
       int sum=(n*(n+1))/2;
