@@ -1,14 +1,18 @@
 class Solution {
 public:
  int missingNumber(vector<int>& nums) {
-   //Optimal solution by Basic Mathematics 
+   //Optimal solution by XOR Operator  
       int n=nums.size();
-      int sum1=0;
-      int sum=(n*(n+1))/2;
-      for(int i=0;i<n;i++){
-        sum1=sum1+nums[i];
+      int XOR=0;
+     // XOR of all numbers in range[0,n]
+      for(int i=0;i<=n;i++){
+        XOR=XOR^i;
       }
-      return sum-sum1;
-    
+      //XOR of all numbers in given array
+      for(auto it:nums){
+        XOR=XOR^it;
+      }
+      //missing number
+      return XOR;
     }
 };
