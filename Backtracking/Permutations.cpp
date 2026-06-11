@@ -5,14 +5,12 @@ public:
             ans.push_back(nums);
             return;
         }
-
         for(int i = index; i < nums.size(); i++) {
             swap(nums[index], nums[i]);      // choose
             solve(nums, ans, index + 1);     // explore
             swap(nums[index], nums[i]);      // backtrack
         }
     }
-
     vector<vector<int>> permute(vector<int>& nums) {
         vector<vector<int>> ans;
         solve(nums, ans, 0);
