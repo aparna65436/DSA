@@ -8,8 +8,7 @@ public:
         for (int idx = n - 1; idx >= 0; idx--) {
 
             // Pop all indices with temperature <= current
-            while (!stack.empty() && 
-                   temperatures[idx] >= temperatures[stack.top()]) {
+            while (!stack.empty() && temperatures[idx] >= temperatures[stack.top()]) {
                 stack.pop();
             }
 
