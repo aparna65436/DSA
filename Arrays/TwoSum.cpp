@@ -1,6 +1,5 @@
 class Solution {
 public:
-    //aparna
     vector<int> twoSum(vector<int>& nums, int target) {
         map<int,int>mpp;
         int n=nums.size();
@@ -15,3 +14,18 @@ public:
         return{-1,-1};
     } 
 }; 
+//Brute force 
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+      for(int i=0;i<nums.size();i++){
+        for(int j=i;j<nums.size();j++){
+            if(i!=j && nums[i]+nums[j]==target){
+                return {i,j};
+            }
+
+        }
+      }
+      return{-1,-1};
+    }
+};
